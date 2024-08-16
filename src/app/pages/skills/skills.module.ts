@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SkillsRoutingModule } from './skills-routing.module';
 import { SkillsComponent } from './skills.component';
 import { RouterLinkWithHref } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { RouterLinkWithHref } from '@angular/router';
   imports: [
     CommonModule,
     SkillsRoutingModule,
-    RouterLinkWithHref
+    RouterLinkWithHref,
+    IonicModule
   ]
 })
 export class SkillsModule { }

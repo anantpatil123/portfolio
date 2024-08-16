@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsComponent } from './projects.component';
 import { RouterLinkWithHref } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RouterLinkWithHref } from '@angular/router';
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    RouterLinkWithHref
+    RouterLinkWithHref,
+    IonicModule
   ]
 })
 export class ProjectsModule { }

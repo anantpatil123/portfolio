@@ -1,9 +1,34 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar class="nav-header">
-    <ion-button slot="start" fill="clear"><span class="title center">ANANT PATIL PORTFOLIO </span></ion-button>
-    <ion-button class="nav-menu" slot="end" fill="clear" [routerLink]="['/skills']">SKILLS</ion-button>
-    <ion-button slot="end" fill="clear"[routerLink]="['/projects']">PROJECTS</ion-button> 
-    <ion-button slot="end"fill="clear" [routerLink]="['/education']">EDUCATION</ion-button> 
-    <ion-button slot="end" fill="clear" [routerLink]="['/contact']">CONTACT</ion-button> 
+    <ion-buttons slot="end" class="mobile-menu">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="center">ANANT PATIL</ion-title>
+    <ion-buttons slot="end" class="desktop-menu">
+      <ion-button fill="clear" [routerLink]="['/skills']">SKILLS</ion-button>
+      <ion-button fill="clear" [routerLink]="['/experience']">EXPERIENCE</ion-button>
+      <ion-button fill="clear" [routerLink]="['/education']">EDUCATION</ion-button>
+      <ion-button fill="clear" [routerLink]="['/contact']">CONTACT</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>ANANT PATIL</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="closeMenu()" [routerLink]="['/skills']">SKILLS</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/experience']">EXPERIENCE</ion-item>
+      <ion-item (click)="closeMenu()"  [routerLink]="['/education']">EDUCATION</ion-item>
+      <ion-item  (click)="closeMenu()" [routerLink]="['/contact']">CONTACT</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+ <ion-content id="main-content">
+<router-outlet></router-outlet>
+</ion-content>
