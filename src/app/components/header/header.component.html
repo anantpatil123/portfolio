@@ -3,12 +3,12 @@
     <ion-buttons slot="end" class="mobile-menu">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title class="center">ANANT PATIL</ion-title>
+    <ion-title class="center" [routerLink]="['/home']">ANANT PATIL</ion-title>
     <ion-buttons slot="end" class="desktop-menu">
-      <ion-button fill="clear" [routerLink]="['/skills']">SKILLS</ion-button>
-      <ion-button fill="clear" [routerLink]="['/experience']">EXPERIENCE</ion-button>
-      <ion-button fill="clear" [routerLink]="['/education']">EDUCATION</ion-button>
-      <ion-button fill="clear" [routerLink]="['/contact']">CONTACT</ion-button>
+      <ion-button fill="clear" [routerLink]="['/skills']"  routerLinkActive="active-button">SKILLS</ion-button>
+      <ion-button fill="clear" [routerLink]="['/experience']"  routerLinkActive="active-button">EXPERIENCE</ion-button>
+      <ion-button fill="clear" [routerLink]="['/education']"  routerLinkActive="active-button">EDUCATION</ion-button>
+      <ion-button fill="clear" [routerLink]="['/contact']"  routerLinkActive="active-button">CONTACT</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -16,16 +16,16 @@
 <ion-menu side="start" menuId="first" contentId="main-content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>ANANT PATIL</ion-title>
+      <ion-title [routerLink]="['/home']">ANANT PATIL</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <ion-item (click)="closeMenu()" [routerLink]="['/skills']">SKILLS</ion-item>
-      <ion-item (click)="closeMenu()" [routerLink]="['/experience']">EXPERIENCE</ion-item>
-      <ion-item (click)="closeMenu()"  [routerLink]="['/education']">EDUCATION</ion-item>
-      <ion-item  (click)="closeMenu()" [routerLink]="['/contact']">CONTACT</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/skills']"  routerLinkActive="active-item">SKILLS</ion-item>
+      <ion-item (click)="closeMenu()" [routerLink]="['/experience']"  routerLinkActive="active-item">EXPERIENCE</ion-item>
+      <ion-item (click)="closeMenu()"  [routerLink]="['/education']"  routerLinkActive="active-item">EDUCATION</ion-item>
+      <ion-item  (click)="closeMenu()" [routerLink]="['/contact']"  routerLinkActive="active-item">CONTACT</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>

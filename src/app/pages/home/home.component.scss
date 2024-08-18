@@ -1,0 +1,150 @@
+.profile-pic-col {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+ion-grid {
+  height: 100%;
+  vertical-align: middle;
+}
+
+// .full-height {
+//     height: 100vh; /* Full viewport height */
+//     // width:100vw;
+//     display: flex;
+//     // justify-content: center; /* Center horizontally */
+//     align-items: center; /* Center vertically */
+//   }
+
+.profile-img {
+  border-radius: 50%;
+  height:410px;
+  width:300px;
+  margin-left: 100px;
+  border: 2px solid #ddd;
+}
+
+.greeting-text {
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.summary-text {
+  font-size: 20px;
+  margin-top: 80px;
+
+}
+
+.text-col{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 100px;
+
+}
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #2f3542;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Learner";
+    color: #103150;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    // background-color: #2f3542;
+    background-color: #ffffff;
+
+
+    border-left: 2px solid #103150;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Front End Developer";
+    }
+    21%,40%{
+        content: "Mobile Developer";
+    }
+    41%,60%{
+        content: "Angular Developer";
+    }
+    // 61%,80%{
+    //     content: "Designer";
+    // }
+    // 81%,100%{
+    //     content: "Gamer";
+    // }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+@media (max-width: 768px) {
+
+  .summary-text {
+    font-size: 15px;
+    margin-top: 80px;
+}
+
+.text-col {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.profile-pic-col {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+
+}
+ 
+}
